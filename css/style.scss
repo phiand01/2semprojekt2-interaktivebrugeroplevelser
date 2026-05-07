@@ -8,7 +8,7 @@ $hacker-red: #C11510;
 * {box-sizing: border-box; margin: 0; padding: 0;}
 
 /*---------------------------------------------------------------------------*/
-/*body + header + footer*/
+/*Main design*/
 
 body{
     font-family: Arial, sans-serif;
@@ -29,7 +29,7 @@ body{
     flex-direction: column;
     align-items: center;
 
-.logo-img { width: 100px; height: auto; }}}
+.logo-img { width: 130px; height: auto; }}}
 
 .main-footer {
     position: absolute;
@@ -40,7 +40,41 @@ body{
     color: #000000;}
 
 /*---------------------------------------------------------------------------*/
-/*boks*/
+/*URL*/
+
+#url-sim {
+    background-color: $bg-gray;
+    border: 1px solid $main-blue;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    
+span {
+    color: #d11111; 
+    font-weight: bold;}
+    
+&.hidden {
+    display: none;}}
+
+/*---------------------------------------------------------------------------*/
+/*Title animation*/
+
+.hacked-title {
+    color: $hacker-red !important;
+    text-transform: uppercase;
+    font-weight: 900;
+    animation: shake 0.2s ease-in-out 0s 2;}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(5px); }
+    50% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }}
+
+/*---------------------------------------------------------------------------*/
+/*Selve testen*/
 
 #app-wrapper{
     flex-grow: 1;
@@ -74,7 +108,6 @@ body{
     display: flex;
     flex-direction: column;
     height: 100%;
-
 h1 { color: $main-blue; font-size: 3rem; margin-bottom: 20px; }
 
 #scene-description { 
@@ -82,20 +115,21 @@ h1 { color: $main-blue; font-size: 3rem; margin-bottom: 20px; }
     line-height: 1.5; 
     margin-bottom: 60px;
     flex-grow: 1;
-
-    p { margin-bottom: 15px; }}}
+p { margin-bottom: 15px; }}}
 
 .image-side {
     flex: 0.8;
     display: flex;
     justify-content: center;
-
 img { width: 100%; max-height: 400px; object-fit: contain; }}}
 
 #options-container {
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+/*---------------------------------------------------------------------------*/   
+/*Button*/
 
 button {
     background-color: $main-blue;

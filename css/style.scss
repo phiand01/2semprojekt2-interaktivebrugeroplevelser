@@ -111,3 +111,44 @@ cursor: pointer;
     border: 1px solid #999;}
 
 .hidden { display: none; }
+
+/*---------------------------------------*/
+/*Responsiv - mobil*/
+
+@media (max-width: 768px) {
+#app-wrapper {
+    padding: 15px; 
+    justify-content: flex-start; 
+    padding-top: 100px; }
+
+#game-card {
+    width: 100%;
+    height: auto; 
+    padding: 25px;
+        
+.content-split {
+    flex-direction: column-reverse; 
+    gap: 20px;}}
+
+.text-side {
+h1 { 
+    font-size: 2rem;}
+        
+#scene-description {
+    margin-bottom: 30px;}}
+
+.image-side {
+img {
+    max-height: 250px;}}
+
+#options-container {
+button {
+    width: 100%; 
+    font-size: 1.1rem;
+    padding: 20px;}}
+
+.main-footer {
+    position: static; 
+    margin-top: 40px;
+    text-align: center;
+    padding-bottom: 20px;}}
